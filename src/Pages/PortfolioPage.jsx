@@ -48,7 +48,7 @@ const Portfolio = () => {
   ];
   return (
     <div className="PortfolioWrapper">
-      <Navbar />
+      {/* <Navbar /> */}
       <Works />
       <div className="portfolioCards">
         {cards.map((card, index) => (

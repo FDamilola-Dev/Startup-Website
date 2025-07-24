@@ -1,33 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState} from "react";
 import logo from "../assets/logonew.svg";
+import { Link } from "react-router-dom";
 // import "./Navbar.css"; // Your custom styles
 // import { FaBars, FaTimes } from "react-icons/fa";
-import "../App.css"
-
+import "../App.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = useRef(null);
-  const toggleRef = useRef(null);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-
-  // Close menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        navRef.current &&
-        !navRef.current.contains(event.target) &&
-        toggleRef.current &&
-        !toggleRef.current.contains(event.target)
-      ) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
-  }, []);
 
   return (
     <nav className="navbar">
@@ -36,22 +15,37 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`menu-toggle ${isOpen ? "open" : ""}`}
-        onClick={toggleMenu}
-        ref={toggleRef}
+        className={`menu-toggle `}
+        onClick={() => setIsOpen(!isOpen)}
       >
         ☰
-        
       </div>
 
-      <ul className={`nav-links ${isOpen ? "active" : ""}`} ref={navRef}>
-        <li onClick={() => setIsOpen(false)}>Home</li>
-        <li onClick={() => setIsOpen(false)}>Portfolio</li>
-        <li onClick={() => setIsOpen(false)}>Services</li>
-        <li onClick={() => setIsOpen(false)}>Contact</li>
-        <li className="close-btn" onClick={toggleMenu}>×</li>
+      <ul className="desktop-nav">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/portfolio">Portfolio</Link>
+        </li>
+        <li>Services</li>
+        <li>Contact</li>
+        <li className="close-btn">×</li>
       </ul>
-      
+
+      {isOpen && (
+        <ul className="menu-items">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/portfolio">Portfolio</Link>
+          </li>
+          <li>Services</li>
+          <li>Contact</li>
+          <li onClick={() => setIsOpen(!isOpen)} className="close-btn">×</li>
+        </ul>
+      )}
     </nav>
   );
 };
