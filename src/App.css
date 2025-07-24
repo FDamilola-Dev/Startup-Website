@@ -24,7 +24,7 @@ button {
   border-radius: 4px;
 }
 
-.navbar {
+/* .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,6 +37,23 @@ button {
     align-items: center;
     padding: 1.5rem 2rem;
   }
+} */
+.navbar {
+  background-color: #74c69d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 1.5rem 2rem;
+}
+@media (min-width: 576px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem 4rem;
+  }
 }
 
 .navbar .logo {
@@ -47,61 +64,105 @@ button {
 .navbar .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .navbar .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    width: 100%;
-    text-align: center;
+    flex-direction: row;
+    gap: 1.5rem;
   }
 }
 
 .navbar .nav-links li {
   color: #fff;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
+}
+
+/* ✅ Hamburger toggle button (only visible on mobile) */
+.menu-toggle {
+  display: block;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  /* align-self: flex-end; */
+  /* margin-bottom: 0.5rem; */
+}
+
+@media (max-width: 575px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    /* width: 100%; */
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+}
+
+@media (min-width: 576px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar .nav-links {
+    display: flex !important;
+  }
+}
+
+.navbar .close-btn {
+  display: block;
+  font-size: 1.8rem;
+}
+@media (min-width: 575px) {
+  .navbar .close-btn{
+  display: none;
+}
 }
 
 .hero {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  text-align: center;
   background-color: #74c69d;
   color: #fff;
-  padding: 4rem 4rem;
+  padding: 2rem 1rem;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 4rem;
   }
 }
 
 .hero-text {
-  max-width: 45%;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .hero-text {
-    max-width: 100%;
-    margin-bottom: 1.5rem;
+    max-width: 45%;
+    text-align: start;
   }
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "Crimson Text", serif;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
 .hero-text p:first-child {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 5px;
   color: #ffffff;
@@ -109,7 +170,12 @@ button {
 
 .hero-text p {
   margin: 1rem 0 2rem;
-  font-size: 15px;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .hero-text p {
+    font-size: 1.25rem;
+  }
 }
 
 .hero-text button {
@@ -119,13 +185,13 @@ button {
 }
 
 .hero img {
-  max-width: 45%;
+  max-width: 100%;
   height: auto;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .hero img {
-    max-width: 100%;
+    max-width: 45%;
   }
 }
 
@@ -152,18 +218,21 @@ button {
 
 .partners p {
   color: #666;
-  margin-bottom: 2rem;
-  max-width: 350px;
-  margin: 1rem auto;
-  text-align: center;
+  max-width: 100%;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .partners p {
-    max-width: 100%;
+    margin-bottom: 2rem;
+    max-width: 350px;
+    margin: 1rem auto;
+    text-align: center;
   }
 }
 
+.partnersText {
+  margin-bottom: 2rem;
+}
 .partners .logos {
   display: flex;
   justify-content: center;
@@ -178,7 +247,6 @@ button {
     gap: 1.5rem;
     display: flex;
     flex-direction: column;
-
   }
 }
 
@@ -195,46 +263,59 @@ button {
 
 .content-page {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 3rem 4rem;
-  gap: 2rem;
+  align-items: center;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
-.content-page:nth-child(odd) {
-  flex-direction: row-reverse;
+@media (min-width: 577px) {
+  .content-page {
+    flex-direction: row;
+    text-align: left;
+    padding: 4rem;
+  }
 }
-@media (max-width: 576px) {
-  .content-page,
+
+@media (min-width: 576px) {
   .content-page:nth-child(odd) {
-    flex-direction: column;
-    padding: 2rem 1rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 2rem 4rem;
   }
 }
 
 .content-page img {
-  max-width: 45%;
+  max-width: 100%;
   border-radius: 8px;
+  margin-bottom: 1rem;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .content-page img {
-    max-width: 100%;
-    margin-bottom: 1rem;
+    max-width: 45%;
   }
 }
 
 .content-page .text {
-  max-width: 450px;
+  max-width: 100%;
+  text-align: start;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .content-page .text {
-    max-width: 100%;
+    max-width: 450px;
   }
 }
 
 .content-page h2 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 577px) {
+  .content-page h2 {
+    font-size: 2rem;
+  }
 }
 
 .content-page p {
@@ -248,10 +329,14 @@ button {
   padding: 0.6rem 1.4rem;
 }
 
-
 .team {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
+}
+@media (min-width: 576px) {
+  .team {
+    padding: 4rem;
+  }
 }
 
 .team-pretitle {
@@ -339,30 +424,32 @@ button {
 .footer {
   background-color: #74c69d;
   color: #fff;
-  text-align: center;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem 4rem;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 1rem;
+  gap: 1rem;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .footer {
-    flex-direction: column;
     text-align: center;
-    padding: 2rem 1rem;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4rem;
   }
 }
 
 .footer-socials {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 1rem;
 }
-@media (max-width: 576px) {
-  .footer-socials{
-    justify-content: center;
+@media (min-width: 576px) {
+  .footer-socials {
+    justify-content: flex-start;
+    gap: 1rem;
   }
 }
 
@@ -375,10 +462,8 @@ button {
 .footer-copy {
   font-size: 1.2rem;
 }
-@media (max-width: 576px) {
-.footer-copy {
-  font-size: 1rem;
+@media (min-width: 576px) {
+  .footer-copy {
+    font-size: 1.2rem;
+  }
 }
-}
-
-

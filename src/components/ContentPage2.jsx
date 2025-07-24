@@ -1,8 +1,7 @@
-import contentPageImg2 from '../assets/hero3.svg'
-const ContentPagee = ({ image, title, text }) => {
+const ContentPagee = ({ image,title, text }) => {
   return (
     <section className="content-page">
-      <img src={contentPageImg2} alt="content visual" />
+      <img src={image} alt="content visual" />
       <div className='text'>
         <h2>{title}</h2>
         <p>{text}</p>

@@ -1,0 +1,24 @@
+.introduction {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 80%;
+  margin-top: 2rem;
+  margin-bottom: 2.8rem;
+  text-align: center;
+}
+.title {
+  font-size: 1 rem;
+  font-weight: 700;
+  color: #74c69d;
+  letter-spacing: 5px;
+}
+
+.portfolioTitle {
+    font-size: 40px;
+    font-weight: 700;
+}

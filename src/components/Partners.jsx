@@ -7,9 +7,12 @@ import spotify from "../assets/spotify.svg";
 const Partners = () => {
   return (
     <section className="partners">
+        <div className="partnersText">
+            
       <h4>PARTNERS</h4>
       <h2>Lorem Ipsum Dolor</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipiscing elit.</p>
+      </div>
       <div className="logos">
         <img src={google} alt="Google" />
         <img src={microsoft} alt="Microsoft" />

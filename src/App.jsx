@@ -1,32 +1,49 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import Partners from './components/Partners';
-import ContentPage from './components/ContentPage';
-import ContentPagee from './components/ContentPage2';
-import './App.css';
-import Talents from './components/Talents';
-import Footer from './components/Footer';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import Partners from "./components/Partners";
+import ContentPage from "./components/ContentPage";
+import ContentPagee from "./components/ContentPage2";
+import Talents from "./components/Talents";
+import Footer from "./components/Footer";
+import PortfolioPage from "./Pages/portfolioPage";
+
+import "./App.css";
+import contentPageImg from "./assets/hero2.svg";
+import contentPageImg2 from "./assets/hero3.svg";
+
+// HomePage component composed from all your sections
+const Home = () => (
+  <>
+    <HeroSection />
+    <Partners />
+    <ContentPage
+      image={contentPageImg}
+      title="Lorem ipsum dolor sit amet consectetur"
+      text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?"
+    />
+    <ContentPagee
+      image={contentPageImg2}
+      title="Lorem ipsum dolor sit amet consectetur "
+      text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?"
+    />
+    <Talents />
+    <Footer />
+  </>
+);
 
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <HeroSection />
-      <Partners />
-      <ContentPage
-        image="/images/illustration1.png"
-        title="Lorem ipsum dolor sit amet consectetur"
-        text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?"
-      />
-      <ContentPagee
-        image="/images/illustration2.png"
-        title="Another lorem section"
-        text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?"
-      />
-      <Talents/>
-      <Footer/>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+
+      </Routes>
+    </Router>
   );
 }
 
