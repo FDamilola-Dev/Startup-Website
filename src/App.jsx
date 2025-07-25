@@ -8,7 +8,7 @@ import ContentPage from "./components/ContentPage";
 import ContentPagee from "./components/ContentPage2";
 import Talents from "./components/Talents";
 import Footer from "./components/Footer";
-import PortfolioPage from "./Pages/Portfolio";
+// import PortfolioPage from "./Pages/PortfolioPage";
 
 import "./App.css";
 import contentPageImg from "./assets/hero2.svg";
