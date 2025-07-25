@@ -8,13 +8,13 @@ import ContentPage from "./components/ContentPage";
 import ContentPagee from "./components/ContentPage2";
 import Talents from "./components/Talents";
 import Footer from "./components/Footer";
-import PortfolioPage from "./Pages/portfolioPage";
+import PortfolioPage from "./Pages/PortfolioPage";
 
 import "./App.css";
 import contentPageImg from "./assets/hero2.svg";
 import contentPageImg2 from "./assets/hero3.svg";
 
-// HomePage component composed from all your sections
+
 const Home = () => (
   <>
     <HeroSection />
