@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Works from "../components/Works";
-import PortfolioCard from "../components/portfolioCard";
+import PortfolioCard from "../components/PortfolioCard";
 import LearnMoreButton from "../components/LearnMoreBtn/LearnMoreBtn";
 import "./Portfolio.css";
 import Footer from "../components/Footer";
