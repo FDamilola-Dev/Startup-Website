@@ -1,0 +1,12 @@
+.learn-more-btn {
+  background: #222;
+    color: #fff;
+    padding: 1em 2rem;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+}
