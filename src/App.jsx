@@ -8,7 +8,7 @@ import ContentPage from "./components/ContentPage";
 import ContentPagee from "./components/ContentPage2";
 import Talents from "./components/Talents";
 import Footer from "./components/Footer";
-// import PortfolioPage from "./Pages/PortfolioPage";
+import Portfolio from "./Pages/Portfolio";
 
 import "./App.css";
 import contentPageImg from "./assets/hero2.svg";
@@ -40,7 +40,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
 
       </Routes>
     </Router>
