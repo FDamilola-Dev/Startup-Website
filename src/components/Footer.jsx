@@ -1,5 +1,5 @@
 
-import FacebookIcon from '../assets/footerIcons/facebookIcon.svg';
+import FacebookIcon from '../assets/footerIcons/FacebookIcon.svg';
 import InstagramIcon  from '../assets/footerIcons/InstagramIcon.svg';
 import TwitterIcon from '../assets/footerIcons/TwitterIcon.svg';
 import PinterestIcon from '../assets/footerIcons/PinterestIcon.svg';
