@@ -6,13 +6,13 @@ import "./Portfolio.css";
 import Footer from "../components/Footer";
 
 import port1 from "../assets/portfolioAssets/portCard1.svg";
-import port2 from "../assets/portfolioAssets/portCard2.svg";
-import port3 from "../assets/portfolioAssets/portCard3.svg";
+import port2 from "../assets/portfolioAssets/PortCard2.svg";
+import port3 from "../assets/portfolioAssets/PortCard3.svg";
 import portF from "../assets/portfolioAssets/portCardF.svg";
-import port4 from "../assets/portfolioAssets/portCard4.svg";
-import port5 from "../assets/portfolioAssets/portCard5.svg";
-import port6 from "../assets/portfolioAssets/portCard6.svg";
-import port7 from "../assets/portfolioAssets/portCard7.png";
+import port4 from "../assets/portfolioAssets/PortCard4.svg";
+import port5 from "../assets/portfolioAssets/PortCard5.svg";
+import port6 from "../assets/portfolioAssets/PortCard6.svg";
+import port7 from "../assets/portfolioAssets/PortCard7.png";
 
 // Desktop Assets
 import portDesk1 from "../assets/portfolioAssets/portDesk1.svg";
