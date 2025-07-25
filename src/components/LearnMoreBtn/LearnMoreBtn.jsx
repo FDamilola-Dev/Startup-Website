@@ -1,4 +1,4 @@
-import "../LearnMoreBtn/LearnMoreBtn.css";
+import "./LearnMoreBtn.css";
 const LearnMore = ({label = "Learn More"}) => {
   return (
     <div>
