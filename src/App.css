@@ -101,11 +101,8 @@ button {
  }
 
  ul.menu-items {
-  border: 2px solid red;
   list-style: none;
   color: #ffffff;
-  /* height: 100vh; */
-  /* width: 100vw; */
  }
 
  @media (min-width: 324px){
@@ -119,7 +116,7 @@ button {
  }
 
 
-/* ✅ Hamburger toggle button (only visible on mobile) */
+
 .menu-toggle {
   display: block;
   font-size: 1.8rem;
