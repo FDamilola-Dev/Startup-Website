@@ -10,6 +10,7 @@ import Talents from "./components/Talents";
 import Footer from "./components/Footer";
 import Portfolio from "./Pages/Portfolio";
 import Services from "./Pages/Service"
+import Contact from "./Pages/Contact"
 
 import "./App.css";
 import contentPageImg from "./assets/hero2.svg";
@@ -43,6 +44,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
 
       </Routes>
     </Router>
