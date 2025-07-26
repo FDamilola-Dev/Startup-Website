@@ -38,10 +38,10 @@ Footer with contact/social details
 # It is built with React and styled with external CSS following a mobile-first approach. Routing is implemented using React Router.
 
 # Live Demo Link
-https://startup-website-design.onrender.com
+https://startupp-website.onrender.com/
 
 # Loom Video Link
-https://www.loom.com/share/your-loom-link-here
+https://www.loom.com/share/8e055aebac9b4cec8ad6f8f9b8e0ddda
 
 #Features
 Responsive navigation with hamburger toggle
