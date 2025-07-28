@@ -99,29 +99,20 @@ button {
   color: #ffffff;
  }
 
+ ul.menu-items {
+  list-style: none;
+  color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+ }
 
-  ul.menu-items {
-    list-style-type: none;
-  position: absolute;
-  top: 70px; /* adjust based on navbar height */
-  right: 0;
-  left: 0;
-  background-color: #74c69d;
-  padding: 2rem 1rem;
-  height: calc(100vh - 70px);
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  gap: 1.5rem;
-  transition: all 0.3s ease-in-out;
-}
-/* 
  @media (min-width: 324px){
   ul.menu-items {
     display: none;
   }
- } */
+ }
 
  ul.menu-items a {
   color: #ffffff;
@@ -162,7 +153,6 @@ button {
 .navbar .close-btn {
   display: block;
   font-size: 1.8rem;
-  color: #ffffff;
 }
 @media (min-width: 575px) {
   .navbar .close-btn{
