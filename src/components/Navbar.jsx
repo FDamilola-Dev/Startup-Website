@@ -32,7 +32,7 @@ const Navbar = () => {
           <Link to="/services">Services</Link>
           </li>
         <li>
-          <Link to="contact">Contact</Link>
+          <Link to="/contact">Contact</Link>
           </li>
         <li className="close-btn">×</li>
       </ul>
@@ -49,7 +49,7 @@ const Navbar = () => {
             <Link to="/services">Services</Link>
           </li>
           <li>
-            <Link to= "/contact">Contact </Link>
+            <Link to= "/contact">Contact</Link>
             </li>
           <li onClick={() => setIsOpen(!isOpen)} className="close-btn">×</li>
         </ul>

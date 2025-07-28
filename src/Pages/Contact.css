@@ -1,6 +1,41 @@
-/* Mobile First Design */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: "Crimson Text", serif;
+}
+
+p {
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;}
+
+  @media(min-width:576px){
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    place-items: normal;
+    min-width: 320px;
+    min-height: 100vh;
+}
+  }
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
 .contactSection {
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
     text-align: center;
     background-color: #fff;
     display: flex;
@@ -48,6 +83,7 @@
   flex-direction: column;
   gap: 1rem;
   width: 100%;
+  padding-left: 1rem
 
 }
 @media (min-width:576px){
