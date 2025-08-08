@@ -43,7 +43,6 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* align-items: center; */
   padding: 1.5rem 2rem;
 }
 @media (min-width: 576px) {
@@ -101,11 +100,12 @@ button {
  }
 
  ul.menu-items {
-  border: 2px solid red;
   list-style: none;
   color: #ffffff;
-  /* height: 100vh; */
-  /* width: 100vw; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
  }
 
  @media (min-width: 324px){
@@ -119,15 +119,16 @@ button {
  }
 
 
-/* ✅ Hamburger toggle button (only visible on mobile) */
+
 .menu-toggle {
   display: block;
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
+  /* height: 100vh */
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   .navbar .nav-links {
     display: none;
     flex-direction: column;
